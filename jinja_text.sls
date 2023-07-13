@@ -1,4 +1,4 @@
-{%- set port = pillar['port'] %}
+#{%- set port = pillar['port'] %}
 {%- set name = pillar['name'] %}
 
 {%- if ('pud-balancer-nn' in grains.get('roles', []) or 'pud-balancer-mr' in grains.get('roles', [])) %}
