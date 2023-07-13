@@ -1,7 +1,7 @@
 server {
 	listen {{ pillar['port'] }},
         location / {
-            proxy_pass https://{{ pillar['name'] }}.{{ pillar['domain'] }}:{{ pillar['port'] }}/;
+            proxy_pass https://{{ pillar['name'] }}.vip.cbr.ru:{{ pillar['port'] }}/;
             proxy_read_timeout 60m;
             proxy_http_version 1.1;
             proxy_set_header Upgrade $http_upgrade;
