@@ -9,6 +9,8 @@
         - template: jinja
         - user: nginx
         - group: nginx
+        - context:
+          port_var: port
   {%- endfor %}
 {%- endif %}
 
