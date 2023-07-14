@@ -4,5 +4,5 @@
 #{{ name }}
 #{%- endfor %}
 
-{% set x = pillar['proxy']['sa5sft06-bpe'] %}
+{% set x = pillar['proxy']['sa5sft06-bpe'][20601] %}
 {{ x }}
