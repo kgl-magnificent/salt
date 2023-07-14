@@ -2,4 +2,4 @@
 
 cmd.run:
   - names:
-    - echo "{{ pillar }}"
+    - echo "{{ pillar1 }}"
