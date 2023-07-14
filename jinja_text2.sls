@@ -1,3 +1,5 @@
-{%- set pillar1 = pillar['proxy'] %}
+{%- set proxy_servers = pillar['proxy'] %}
 
-test.echo {{ pillar1 }}
+{{%- for name in pillar['proxy'] %}}
+{{ name }}
+{{%- endfor %}}
