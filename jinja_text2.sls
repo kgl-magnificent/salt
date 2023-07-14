@@ -1,5 +1,3 @@
 {%- set pillar1 = pillar['proxy'] %}
 
-cmd.run:
-  - names:
-    - echo "{{ pillar1 }}"
+test.echo '{{ pillar1 }}'
