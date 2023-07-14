@@ -1,4 +1,4 @@
-{%- pillar1 = pillar['proxy'] %}
+{%- set pillar1 = pillar['proxy'] %}
 
 cmd.run:
   - names:
