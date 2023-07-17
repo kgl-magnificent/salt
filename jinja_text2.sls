@@ -4,5 +4,9 @@
 #{%- endfor  %}
 
 {%- for server, args in salt.pillar.get('proxy', {}).items() %}
-  {{args['name']}}  
+  /home/{{args['name']}}.txt
+    file.managed:
+      - source: salt://file/file.txt
+      - user: nginx
+      - group: nginx  
 {%- endfor  %}
