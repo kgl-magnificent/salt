@@ -4,9 +4,10 @@
 #{%- endfor  %}
 
 {%- for server in salt.pillar.get('proxy', {}).items() %}
-  /home/file.txt:
-    file.managed:
-      - source: salt://file/file.txt
-      - user: nginx
-      - group: nginx
+  
+   file.managed:
+    - name: /home/file.txt
+    - source: salt://file/file.txt
+    - user: nginx
+    - group: nginx
 {%- endfor  %}
