@@ -3,5 +3,5 @@
 #{{ x }}
 #{%- endfor  %}
 
-{%- set x = salt.pillar.get('proxy', {}) %}
-{{ x }}
+{%- for server in salt.pillar.get('proxy', {}).items() %}
+{{server}}
