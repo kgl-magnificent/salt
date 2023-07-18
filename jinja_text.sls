@@ -11,8 +11,9 @@
           - user: nginx
           - group: nginx
           - context:
-            port_var: port
-            name_var: server_name
+            port_var: {{port}}
+            name_var: {{server_name}}
+            ssl_var: {{port['ssl']}}
     {%- endfor %}
   {%- endfor %}
 {%- endif %}
