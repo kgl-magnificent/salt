@@ -13,7 +13,7 @@
           - context:
             port_var: {{port}}
             name_var: {{server_name}}
-            ssl_var: {{port['ssl']}}
+            ssl_var: {{args['port']['ssl']}}
     {%- endfor %}
   {%- endfor %}
 {%- endif %}
