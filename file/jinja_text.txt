@@ -1,5 +1,11 @@
 server {
+{%- if (ssl_var == False) %}
 	listen {{ port_var }},
+{%- endif %}
+{%- if (ssl_var == True) %}
+        listen {{ port_var }} ssl,
+        include conf.d/ssl_servers.headers;
+{%- endif %}  
         location / {
             proxy_pass https://{{ name_var }}.vip.cbr.ru:{{ port_var }}/;
             proxy_read_timeout 60m;
